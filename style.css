@@ -1,0 +1,40 @@
+/* Define a fonte geral da página e o espaçamento */
+body {
+    font-family: Arial, sans-serif; /* Define a fonte do texto */
+    padding: 20px; /* Espaço interno ao redor do conteúdo */
+  }
+  
+  /* Define o estilo dos rótulos, inputs e botões */
+  label, input, button {
+    margin: 5px 0; /* Espaçamento entre elementos */
+    display: block; /* Cada elemento ocupa uma linha inteira */
+  }
+  
+  /* Estiliza a div do carrinho */
+  #carrinho {
+    margin-top: 20px; /* Espaço acima da seção do carrinho */
+  }
+  
+/* Estiliza o modal de ofertas */
+#modalOferta {
+    display: none; /* Esconde o modal inicialmente */
+    position: fixed; /* Fixa o modal na tela, mesmo com rolagem */
+    top: 0; /* Posiciona no topo da tela */
+    left: 0; /* Posiciona na esquerda da tela */
+    width: 100%; /* Largura total da tela */
+    height: 100%; /* Altura total da tela */
+    background: rgba(0,0,0,0.7); /* Fundo escuro com transparência */
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+    align-items: center; /* Centraliza o conteúdo verticalmente */
+    z-index: 1000; /* Garante que o modal fique acima de todos os elementos */
+  }
+  
+  /* Estiliza o conteúdo interno do modal (caixa branca) */
+  #modalOferta div {
+    background: white; /* Fundo branco para destacar o conteúdo */
+    padding: 20px; /* Espaçamento interno */
+    border-radius: 10px; /* Bordas arredondadas */
+    text-align: center; /* Centraliza o texto */
+  }
+  
+  

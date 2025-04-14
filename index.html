@@ -1,0 +1,41 @@
+<!DOCTYPE html> <!-- Declara que o documento é HTML5 -->
+<html lang="pt-br"> <!-- Inicia o HTML e define o idioma como português brasileiro -->
+<head> <!-- Início da seção de cabeçalho do site -->
+  <meta charset="UTF-8"> <!-- Define o conjunto de caracteres como UTF-8 para aceitar acentuação -->
+  <title>Carrinho de Compras</title> <!-- Título que aparece na aba do navegador -->
+  <link rel="stylesheet" href="style.css"> <!-- Importa o arquivo CSS externo -->
+</head>
+<body> <!-- Início do corpo da página, onde aparece o conteúdo visível -->
+
+  <h1>Carrinho de Compras</h1> <!-- Título principal da página -->
+
+  <!-- Início do formulário para o usuário preencher os dados do produto -->
+  <label for="codigo">Código do Produto:</label> <!-- Rótulo para o campo de código -->
+  <input type="text" id="codigo"> <!-- Campo de texto onde o usuário digita o código do produto -->
+
+  <label for="nome">Nome do Produto:</label> <!-- Rótulo para o campo de nome -->
+  <input type="text" id="nome"> <!-- Campo de texto onde o usuário digita o nome do produto -->
+
+  <label for="quantidade">Quantidade:</label> <!-- Rótulo para o campo de quantidade -->
+  <input type="number" id="quantidade"> <!-- Campo numérico onde o usuário digita a quantidade desejada -->
+
+  <label for="valor">Valor Unitário (R$):</label> <!-- Rótulo para o campo de valor -->
+  <input type="number" id="valor" step="0.01"> <!-- Campo numérico com casas decimais para o valor do produto -->
+
+  <button onclick="adicionarProduto()">Adicionar ao Carrinho</button> <!-- Botão que chama a função de adicionar o produto -->
+
+  <div id="carrinho"></div> <!-- Div onde será exibido o conteúdo do carrinho -->
+
+  <!-- Modal que aparece quando o usuário tenta sair da página -->
+  <div id="modalOferta"> <!-- Div que representa o modal -->
+    <div> <!-- Conteúdo interno do modal -->
+      <h2>Antes de sair...</h2> <!-- Título do modal -->
+      <p>Aproveite nossas ofertas especiais!</p> <!-- Mensagem do modal -->
+      <p>20% de desconto ao finalizar sua compra</p>
+      <button onclick="fecharModal()">Fechar</button> <!-- Botão que fecha o modal -->
+    </div>
+  </div>
+
+  <script src="script.js"></script> <!-- Importa o arquivo JavaScript externo -->
+</body>
+</html>
