@@ -1,26 +1,30 @@
-<!DOCTYPE html> <!-- Declara que o documento é HTML5 -->
-<html lang="pt-br"> <!-- Inicia o HTML e define o idioma como português brasileiro -->
-<head> <!-- Início da seção de cabeçalho do site -->
-  <meta charset="UTF-8"> <!-- Define o conjunto de caracteres como UTF-8 para aceitar acentuação -->
-  <title>Carrinho de Compras</title> <!-- Título que aparece na aba do navegador -->
-  <link rel="stylesheet" href="style.css"> <!-- Importa o arquivo CSS externo -->
+<!DOCTYPE html> 
+<html lang="pt-br"> 
+<head> 
+  <meta charset="UTF-8"> 
+  <title>Carrinho de Compras</title> 
+  <link rel="stylesheet" href="style.css"> 
 </head>
-<body> <!-- Início do corpo da página, onde aparece o conteúdo visível -->
-  <h1>Pedro Henrique Carmo de Souza</h1>
+<audio id="musicaBoasVindas" autoplay>
+    <source src="Musica de recepção.mp3" type="audio/mpeg">
+    Seu navegador não suporta áudio HTML5.
+  </audio>
+  
+<body> 
 
-  <h1>Carrinho de Compras</h1> <!-- Título principal da página -->
+  <h1>Carrinho de Compras</h1> 
 
   <!-- Início do formulário para o usuário preencher os dados do produto -->
-  <label for="codigo">Código do Produto:</label> <!-- Rótulo para o campo de código -->
-  <input type="text" id="codigo"> <!-- Campo de texto onde o usuário digita o código do produto -->
+  <label for="codigo">Código do Produto:</label> <!-- Texto do campo de código -->
+  <input type="text" id="codigo"> <!-- Campo de texto onde o usuário digita o código do produto do tipo texto com um id:codigo -->
 
-  <label for="nome">Nome do Produto:</label> <!-- Rótulo para o campo de nome -->
-  <input type="text" id="nome"> <!-- Campo de texto onde o usuário digita o nome do produto -->
+  <label for="nome">Nome do Produto:</label> <!-- Texto do campo de código -->
+  <input type="text" id="nome"><!-- Campo de texto onde o usuário digita o código do produto do tipo texto com um id:nome -->
 
-  <label for="quantidade">Quantidade:</label> <!-- Rótulo para o campo de quantidade -->
-  <input type="number" id="quantidade"> <!-- Campo numérico onde o usuário digita a quantidade desejada -->
+  <label for="quantidade">Quantidade:</label> <!-- Texto do campo de código -->
+  <input type="number" id="quantidade"> <!-- Campo de texto onde o usuário digita o código do produto do tipo numero com um id:quantidade -->
 
-  <label for="valor">Valor Unitário (R$):</label> <!-- Rótulo para o campo de valor -->
+  <label for="valor">Valor Unitário (R$):</label> <!-- Texto do campo de código -->
   <input type="number" id="valor" step="0.01"> <!-- Campo numérico com casas decimais para o valor do produto -->
 
   <button onclick="adicionarProduto()">Adicionar ao Carrinho</button> <!-- Botão que chama a função de adicionar o produto -->
