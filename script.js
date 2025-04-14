@@ -2,12 +2,28 @@
 window.onload = mostrarCarrinho;
 
 // Adiciona um evento que detecta quando o mouse sai da tela
-document.addEventListener("mouseout", function (e) {
+document.addEventListener("mouseout", function (e) { 
+/*document:se refere a toda a página web (HTML)
+.addEventListener: é um método que espera alguma coisa acontecer
+"mouseout": é o tipo de evento que estamos esperando, quando o mouse sai de dentro da janela do navegador.
+function (e): define o que vai acontecer quando o evento acontecer. O e é um objeto do evento, que contém informações como posição do mouse, teclas apertadas, etc.
+*/
+    
 
-    // Verifica se o ponteiro do mouse saiu pela parte de cima da janela do navegador
-    if (e.clientY < 0) {
+if (e.clientY < 0) {
+        /*if: é uma condição, só executa o que está dentro dela se for verdadeira.
+
+e.clientY: pega a posição vertical do ponteiro do mouse em relação ao topo da janela (0 = topo).
+< 0: verifica se o mouse passou para cima da janela (ou seja, saiu da tela).
+
+Essa linha pergunta: "O ponteiro do mouse foi para cima da janela?"
+Se sim, então mostra o modal.
+*/
       // Exibe o modal de oferta alterando o estilo de display para "flex"
       document.getElementById("modalOferta").style.display = "flex";
+/*.getElementById("modalOferta"): pega o elemento com o ID modalOferta (que é o nosso modal).
+.style.display: acessa o estilo de exibição do elemento.
+= "flex": define o estilo como flexível (visível). Assim o modal aparece centralizado. */
     }
   });
   
@@ -105,3 +121,16 @@ function removerItem(index) {
   // Atualiza a exibição na tela
   mostrarCarrinho();
 }
+
+// Função para tocar a música após a primeira interação do usuário
+function iniciarMusica() {
+    const musica = document.getElementById("musicaBoasVindas");
+    musica.play(); // Toca a música
+    document.removeEventListener("click", iniciarMusica); // Remove o evento após tocar
+    document.removeEventListener("mousemove", iniciarMusica); // Também remove do mouse
+  }
+  
+  // Escuta a primeira interação do usuário (clique ou movimento do mouse)
+  document.addEventListener("click", iniciarMusica);
+  document.addEventListener("mousemove", iniciarMusica);
+  
